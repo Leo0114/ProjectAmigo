@@ -1,0 +1,377 @@
+{
+    "rotaryOne": [
+        {
+            "name": "49er Rotary (Ciudad de Nevada, CA)"
+        },
+        {
+            "name": "Agawam (Agawam, MA)"
+        },
+        {
+            "name": "Anchorage South (Anchorage, Alaska)"
+        },
+        {
+            "name": "Arcata Sunrise (Arcata, CA)"
+        },
+        {
+            "name": "Bartow, FL. INC (Bartow, FL)"
+        },
+        {
+            "name": "Barrie Kempenfelt (Barrie, ON)"
+        },
+        {
+            "name": "Bellingham Sunrise (Bellingham, WA)"
+        },
+        {
+            "name": "Brewster (Brewster, Nueva York)"
+        },
+        {
+            "name": "Boise Sunrise Rotary (Boise, ID)"
+        },
+        {
+            "name": "Burlingame (Burlingame, CA)"
+        },
+        {
+            "name": "Casas Adobes Rotary (Tucson, AZ)"
+        },
+        {
+            "name": "Parque Challenger de Calgary (Calgary, AB)"
+        },
+        {
+            "name": "Camrose (Camrose, AB)"
+        },
+        {
+            "name": "Amanecer de Camrose (Camrose, AB)"
+        },
+        {
+            "name": "Centreville-Farmington (UT)"
+        },
+        {
+            "name": "Vermont central (Montpelier, VT)"
+        },
+        {
+            "name": "Centralia (Centralia, MO)"
+        },
+        {
+            "name": "Clarion (Clarion, IA)"
+        },
+        {
+            "name": "Clarksville (Clarksville, IN)"
+        },
+        {
+            "name": "Crescent City (Crescent City, CA)"
+        },
+        {
+            "name": "Clinton, CT (Clinton, CT)"
+        },
+        {
+            "name": "Colchester-Milton (Colchester, VT)"
+        },
+        {
+            "name": "Coos Bay - North Bend (Coos Bay, Oregón)"
+        },
+        {
+            "name": "Coquille (Coquille, Oregón)"
+        },
+        {
+            "name": "Corning (Corning, Nueva York)"
+        },
+        {
+            "name": "Courtenay (Courtenay, BC)"
+        },
+        {
+            "name": "Danville / Sycamore (Danville, CA)"
+        },
+        {
+            "name": "Dawson Creek (Dawson Creek, BC)"
+        },
+        {
+            "name": "Distrito 5150 (Novato, CA)"
+        },
+        {
+            "name": "Distrito 7850 (Williston, VT)"
+        },
+        {
+            "name": "Dixon (Dixon, IL)"
+        },
+        {
+            "name": "Durango High Noon (Durango, CO)"
+        },
+        {
+            "name": "East Palo Alto Bayshore (Palo Alto, CA)"
+        },
+        {
+            "name": "Easthampton (Easthampton, MA)"
+        },
+        {
+            "name": "Noreste de Edmonton (Edmonton, AB)"
+        },
+        {
+            "name": "Edmonton Mayfield (Edmonton, AB)"
+        },
+        {
+            "name": "Avenida Edmonton Whyte (Edmonton, AB)"
+        },
+        {
+            "name": "eClub One (6054)"
+        },
+        {
+            "name": "eClub de Canada One (5370)"
+        },
+        {
+            "name": "eClub del suroeste (5510)"
+        },
+        {
+            "name": "Fisherman's Wharf (San Francisco, CA)"
+        },
+        {
+            "name": "Forest City (Forest City, IA)"
+        }
+    ],
+    "rotarySad": [
+        {
+            "name": "Rancho Cotati (Rohnert Park, CA)"
+        },
+        {
+            "name": "Rancho Santa Fe (Rancho Santa Fe, CA)"
+        },
+        {
+            "name": "Fundación RC Hamden (Hamden, CT)"
+        },
+        {
+            "name": "Redmond Rousers (Sammamish, WA)"
+        },
+        {
+            "name": "Redondo Beach (Redondo Beach, CA)"
+        },
+        {
+            "name": "Reno Sur (Reno, NV)"
+        },
+        {
+            "name": "Reno Sunrise (Reno, NV)"
+        },
+        {
+            "name": "Rockland (Rockland, ME)"
+        },
+        {
+            "name": "Rohnert Park-Cotati (Rohnert Park, CA)"
+        },
+        {
+            "name": "San Bruno (San Bruno, CA)"
+        },
+        {
+            "name": "Santa Rosa (Santa Rosa, CA)"
+        },
+        {
+            "name": "Santa Rosa West (Santa Rosa, CA)"
+        },
+        {
+            "name": "Sausalito (Sausalito, CA)"
+        },
+        {
+            "name": "Sayre (Sayre, está bien)"
+        },
+        {
+            "name": "Sequim Sunrise (Sequim, WA)"
+        },
+        {
+            "name": "Seymour Oxford (Seymour, CT)"
+        },
+        {
+            "name": "Scarborough (Scarborough, ME)"
+        },
+        {
+            "name": "Shasta Valley (Yreka, CA)"
+        },
+        {
+            "name": "Shawnee (Shawnee, OK)"
+        },
+        {
+            "name": "Más pronto (Norman, OK)"
+        },
+        {
+            "name": "Club rotario de Southtowne, (Eugene, OR)"
+        },
+        {
+            "name": "Suroeste de Wichita Falls (Wichita Falls, TX)"
+        },
+        {
+            "name": "Fondo benéfico de South Puget Sound (Olimpia, WA)"
+        },
+        {
+            "name": "Spruce Grove (Spruce Grove, AB)"
+        },
+        {
+            "name": "San Alberto - Ciudad Santa, (St. Albert, AB)"
+        },
+        {
+            "name": "Rotary eClub del estado de Jefferson"
+        },
+        {
+            "name": "Llanura pedregosa (Llanura pedregosa, AB)"
+        },
+        {
+            "name": "Stratford (Stratford, CT)"
+        },
+        {
+            "name": "Sun City Center (Sun City Center, FL)"
+        },
+        {
+            "name": "Sunriver (Bend, Oregón)"
+        },
+        {
+            "name": "Susanville (Susanville, CA)"
+        },
+        {
+            "name": "Terra Linda (San Rafael, CA)"
+        },
+        {
+            "name": "Tiburon Belvedere (Tiburon, CA)"
+        },
+        {
+            "name": "Tsawwassen (Delta, Columbia Británica)"
+        },
+        {
+            "name": "Valle de la Luna (Santa Rosa, CA)"
+        },
+        {
+            "name": "Club rotario de Westminster (Westminster, CO)"
+        },
+        {
+            "name": "Williston-Richmond (Williston, VT)"
+        },
+        {
+            "name": "Woodland Luna Vista (Woodland, CA)"
+        },
+        {
+            "name": "Woodbridge (Woodbridge, CT)"
+        },
+        {
+            "name": "Yelm (Yelm, WA)"
+        }
+    ],
+    "rotaryTwo": [
+        {
+            "name": "Frostproof (Frostproof, FL)"
+        },
+        {
+            "name": "Grande Prairie (Grande Prairie, AB)"
+        },
+        {
+            "name": "Great Falls (Great Falls, MT)"
+        },
+        {
+            "name": "Gran Albany (Albany, OR)"
+        },
+        {
+            "name": "Gran Corvallis (Corvallis, Oregón)"
+        },
+        {
+            "name": "Green Valley (Green Valley, AZ)"
+        },
+        {
+            "name": "Pradera de halcón (Olympia, WA)"
+        },
+        {
+            "name": "Río Alto (Río Alto, AB)"
+        },
+        {
+            "name": "Healdsburg (Healdsburg, CA)"
+        },
+        {
+            "name": "Fundación Ignacio (Novato, CA)"
+        },
+        {
+            "name": "Issaquah Rotary (Issaquah, WA)"
+        },
+        {
+            "name": "Jackson (Jackson, MO)"
+        },
+        {
+            "name": "Valle del glaciar de Juneau (Juneau, AK)"
+        },
+        {
+            "name": "Lacey (Lacey, WA)"
+        },
+        {
+            "name": "Long Beach (Long Beach, CA)"
+        },
+        {
+            "name": "Los Gatos (Los Gatos, CA)"
+        },
+        {
+            "name": "Marin Evening (San Rafael, CA)"
+        },
+        {
+            "name": "Marin Sunrise (Larkspur, CA)"
+        },
+        {
+            "name": "Marshall (Marshal, TX)"
+        },
+        {
+            "name": "Mason City (Mason City, IA)"
+        },
+        {
+            "name": "Mason City Sunrise (Mason City, IA)"
+        },
+        {
+            "name": "Fundación Rotaria Meriden (Meriden, CT)"
+        },
+        {
+            "name": "Club rotario metropolitano (Eugene, OR)"
+        },
+        {
+            "name": "Milford (Milford, CT)"
+        },
+        {
+            "name": "Minden (Minden, NV)"
+        },
+        {
+            "name": "Misión San Rafael (San Rafael, CA)"
+        },
+        {
+            "name": "Monroe Woodbury (Monroe, Nueva York)"
+        },
+        {
+            "name": "Nanaimo (Nanaimo, BC)"
+        },
+        {
+            "name": "Nisku y Leduc (Edmonton, AB)"
+        },
+        {
+            "name": "Norman (Norman, OK)"
+        },
+        {
+            "name": "North Pocono (Moscú, PA)"
+        },
+        {
+            "name": "North Scranton (Scranton, PA)"
+        },
+        {
+            "name": "Novato (Novato, CA)"
+        },
+        {
+            "name": "Fundación Orange, Inc. (Orage, CT)"
+        },
+        {
+            "name": "Orillia (Orillia, ON)"
+        },
+        {
+            "name": "Osoyoos (Columbia Británica)"
+        },
+        {
+            "name": "Atardecer de Palos Verdes (Palos Verdes"
+        },
+        {
+            "name": "Pasco-Kennewick (WA)"
+        },
+        {
+            "name": "Patterson (Red Hook, Nueva York)"
+        },
+        {
+            "name": "Península, CA)"
+        },
+        {
+            "name": "Penn Valley (Penn Valley, CA)"
+        }
+    ]
+}

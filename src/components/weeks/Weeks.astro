@@ -1,0 +1,53 @@
+---
+import { Image } from "astro:assets";
+import { type CollectionEntry } from "astro:content";
+type Props = {
+  weeks: CollectionEntry<"weeks">[];
+};
+const { weeks } = Astro.props;
+---
+
+<div class="container mx-auto mb-12 max-w-[1400px]">
+  <div class="grid gap-6 lg:grid-cols-3">
+    {
+      weeks.map((week) => {
+        const route = `/weeks/${week.slug}`;
+        const imagen = `week ${week.slug} image`;
+        const titulo = `week ${week.slug} title`;
+        return (
+          <div
+            class="hover:scale-105 w-5/6  mx-auto  text-center duration-300 transition-all relative overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20 bg-[50%]"
+            data-te-ripple-init
+            data-te-ripple-color="dark"
+          >
+            <Image
+              class="w-full h-full align-middle transition duration-300 ease-linear"
+              transition:name={imagen}
+              transition:persist
+              src={week.data.cover}
+              alt={week.data.coverAlt}
+              quality={"mid"}
+              format="avif"
+              loading={"lazy"}
+            />
+            <a href={route}>
+              <div class="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed bg-[hsla(0,0%,0%,0.3)]">
+                <div class="flex h-full items-end justify-start">
+                  <h5
+                    class="m-6 text-lg font-bold text-white"
+                    transition:name={titulo}
+                  >
+                    {week.data.title}
+                  </h5>
+                </div>
+              </div>
+              <div>
+                <div class="mask absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100 bg-[hsla(0,0%,99.2%,0.15)]" />
+              </div>
+            </a>
+          </div>
+        );
+      })
+    }
+  </div>
+</div>

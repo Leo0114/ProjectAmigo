@@ -1,0 +1,77 @@
+---
+import { Astronav, MenuItems, MenuIcon } from "astro-navbar";
+import ThemeToggle from "@components/ThemeToggle";
+import { Image } from "astro:assets";
+import paLogo from "@assets/PaLogo.webp";
+
+const navItems = [
+  { title: "Get Involved", path: "/getInvolved" },
+  { title: "Service Weeks", path: "/serviceWeeks" },
+  { title: "Safety", path: "/safety" },
+  { title: "About Us", path: "/aboutUs" },
+  { title: "Contact", path: "/contact" },
+];
+---
+
+<div class="shadow-sm">
+  <div class="max-w-xl mx-auto">
+    <header class="px-4 mx-auto lg:py-4 lg:px-6 pb-28">
+      <Astronav closeOnClick>
+        <div
+          class="mx-auto mb-8 lg:mb-6 flex items-center justify-center lg:justify-between"
+        >
+          <div class="flex flex-col items-center text-center mx-auto">
+            <a
+              class="flex transition-all duration-300"
+              href="/"
+              aria-label="PA home"
+              role="link"
+            >
+              <Image
+                alt="Pa logo"
+                src={paLogo}
+                quality="low"
+                format="avif"
+                loading="lazy"
+                class="xl:w-1/12 w-1/6 md:block flex pt-2"
+                quality={"low"}
+              />
+              <span
+                class="prose-2xl inline text-5xl font-extrabold dark:text-slate-300 text-slate-950"
+                >ProjectAmigo</span
+              >
+            </a>
+          </div>
+
+          <ThemeToggle client:load />
+          <div class="block lg:hidden px-4">
+            <MenuIcon class="w-5 h-5" />
+          </div>
+        </div>
+        <MenuItems class="hidden lg:flex">
+          <div class="flex flex-col items-center justify-between md:flex-row">
+            {
+              navItems.map((item) => (
+                <ul>
+                  <li>
+                    <a
+                      href={item.path}
+                      class={
+                        item.path.length < 0 && item.path
+                          ? "flex-row justify-center decoration-blue-500 dark:decoration-blue-400 underline-offset-2 underline dark:text-slate-200 text-slate-950   transition-all cursor-pointer bg-slate-300 dark:bg-slate-700   focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg  px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55   mr-2 mb-2 shadow-lg  scale-105  gap-x-2 "
+                          : "flex-row justify-center dark:text-slate-200 text-slate-950  transition-all cursor-pointer hover:bg-slate-300 dark:hover:bg-slate-700   focus:ring-4 focus:outline-none focus:ring-[#1da1f2]/50 font-medium rounded-lg  px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#1da1f2]/55   mr-2 mb-2 hover:shadow-lg  duration-300 ease-in-out hover:scale-110 scale-90 gap-x-2 opacity-70 hover:opacity-100"
+                      }
+                      aria-label={item.title}
+                    >
+                      {item.title}
+                    </a>
+                  </li>
+                </ul>
+              ))
+            }
+          </div>
+        </MenuItems>
+      </Astronav>
+    </header>
+  </div>
+</div>

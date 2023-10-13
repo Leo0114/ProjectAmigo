@@ -1,0 +1,66 @@
+---
+import logito from "@assets/PaLogo.webp";
+import { Image } from "astro:assets";
+import Social from "@components/layout/SocialMedia.astro";
+
+const navItems = [
+  { title: "Get Involved", path: "/getInvolved" },
+  { title: "Service Weeks", path: "/serviceWeeks" },
+  { title: "Safety", path: "/safety" },
+  { title: "About Us", path: "/aboutUs" },
+  { title: "Contact", path: "/contact" },
+];
+---
+
+<footer class="w-full py-16">
+  <div class="md:px-12 lg:px-28">
+    <div class="container m-auto space-y-6">
+      <div class="flex flex-col items-center text-center">
+        <a class="flex items-center" href="/">
+          <Image
+            class="h-8 w-8 ml-2"
+            src={logito}
+            alt="pa log"
+            loading="lazy"
+            format="avif"
+            quality={"low"}
+          />
+          <span class="prose-2xl">ProjectAmigo</span>
+        </a>
+      </div>
+      <ul
+        role="list"
+        class="flex flex-col items-center justify-center gap-4 py-4 sm:flex-row sm:gap-8"
+      >
+        {
+          navItems.map((nav) => (
+            <li role="listitem">
+              <a
+                class=" text-sm text-gray-600 transition-colors duration-300 hover:text-sky-500 dark:text-gray-300 dark:hover:text-sky-400"
+                href={nav.path}
+                aria-label={"link a " + nav.title}
+              >
+                {nav.title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+      <Social />
+      <div class="text-center">
+        <span class="text-sm tracking-wide"
+          >Copyright © ProjectAmigo <span id="year"></span> | All right
+          reserved</span
+        >
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script is:inline>
+const year = document.getElementById("year");
+const currentYear = new Date().getFullYear();
+if (year) {
+  year.textContent = currentYear.toString();
+}
+</script>

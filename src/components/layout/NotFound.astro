@@ -1,0 +1,34 @@
+---
+import { Image } from "astro:assets";
+import notFound from "@assets/vol1.webp";
+---
+
+<div class="flex flex-col h-screen min-h-screen transition-all duration-300">
+  <Image
+    src={notFound}
+    alt="Not found"
+    class="object-cover w-full h-80 rounded-b-xl"
+    quality={"mid"}
+    format="avif"
+    loading={"lazy"}
+  />
+
+  <div class="flex items-center justify-center flex-1">
+    <div class="max-w-xl px-4 py-8 mx-auto text-center prose-2xl">
+      <h1 class="text-2xl font-bold tracking-tight sm:text-4xl">
+        Page not Found
+      </h1>
+
+      <p class="mt-4 text-gray-500">
+        Try searching again, or return home to start from the beginning.
+      </p>
+
+      <a
+        href="/"
+        class="transition-all hover:scale-105 duration-300 text-stone-300 inline-block px-5 py-3 mt-6 text-sm font-medium dark:bg-sky-500 bg-sky-600 rounded hover:bg-sky-700 focus:outline-none focus:ring"
+      >
+        Regresar
+      </a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,95 @@
+---
+import { Image } from "astro:assets";
+import map from "@assets/mapcolima.webp";
+---
+
+<div
+  class="py-12 max-w-[1400px] mx-auto prose lg:prose-lg transition-all duration-300"
+>
+  <div class="text-center">
+    <h1
+      class="text-3xl md:text-5xl font-semibold dark:text-slate-300 text-slate-950"
+    >
+      Safety at Project Amigo
+    </h1>
+    <h3 class="font-extrabold text-xl my-4 dark:text-slate-300 text-slate-950">
+      Your safety is our most important priority when you visit.
+    </h3>
+  </div>
+
+  <div class="items-center dark:text-slate-300 text-slate-950">
+    <div>
+      <p class="">
+        On January 10, 2018, the U.S. State Department amended its <a
+          href="https://travel.state.gov/content/travel/en/traveladvisories/traveladvisories/mexico-travel-advisory.html"
+          target="_blank"
+          class="text-sky-600 underline text-justify">travel warning</a
+        >
+         for the entire country of Mexico including the State of Colima where
+        Project Amigo is located. The Statement with respect to Colima is a
+        level 4 and advises US government employees to not travel in a large
+        part of the state, and recommends no tourism to the area.
+      </p>
+    </div>
+    <div class="flex flex-wrap items-center">
+      <div class="w-full md:w-1/2 lg:pr-4">
+        <Image
+          src={map}
+          alt="colima map"
+          quality={"mid"}
+          class={" rounded-lg mx-auto w-full md:w-auto"}
+          format="avif"
+        />
+      </div>
+      <div class="w-full md:w-1/2 lg:pl-4">
+        <p>
+          For reference purposes, this is a map of the State of Colima. Project
+          Amigo is in the mountains in the far northeast part of the State above
+          Comala in the rural community of Cofradia de Suchitlan. Most of the
+          staff is Mexican, and they have lived in Colima their whole lives. Our
+          General Manager, Kirk Dretzka, is an American who grew up and lives in
+          Tecoman, which is included in the travel warning. Project Amigo, in
+          its 30+ years, has had no instance of violence or threatened violence.
+          Further, we believe that Colima is safe, with the adequate precautions
+          we always deem necessary.
+        </p>
+        <p>
+          The violence in Colima is a result of the drug cartels and is centered
+          in and along the coast and the boarder with Michoacan. This is at
+          least a two-hour drive from our headquarters and primary base of
+          operation. Cofradia de Suchitlan, Comala, Suchitlan and the
+          surrounding areas have experienced no violence, gang or otherwise
+        </p>
+      </div>
+    </div>
+    <div>
+      <p>
+        We take great care to ensure that visitors are not ever taken to places
+        that might be risky. We routinely host visitors in Work Weeks, and our
+        staff knows the areas of Colima that are safe and those that are prone
+        to violence well. They understand the local issues and have their ears
+        to the ground.
+      </p>
+      <p>
+        We believe that our staff and our visitors to Mexico are safe. We will
+        continue to take every precaution to ensure that safety. The State
+        Department does not prohibit U.S. citizens from traveling to Mexico, but
+        develops advisories based on what they tell their own workers about
+        travel risks. Many of the conditions that are noted by the State
+        Department have existed for years and have not escalated, <span
+          class="underline font-extrabold"
+          >but their advisory system has recently changed.</span
+        >
+      </p>
+      <p>
+        Our work in Mexico is important, and the people we serve there need our
+        help. Project Amigo, with your assistance, has made a huge difference in
+        the lives of families and we look forward to a long future of continuing
+        to do so. We welcome any questions. Please don’t hesitate to contact our
+        staff or any member of our Board of Directors about this matter
+      </p>
+      <p>Sincerely,</p>
+      <p>Bev Oster Ornelas, Board Chair</p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,39 @@
+---
+import { Image } from "astro:assets";
+import { type CollectionEntry } from "astro:content";
+type Props = {
+  about: CollectionEntry<"about">[];
+};
+const { about } = Astro.props;
+---
+
+<div
+  class="text-center max-w-[1400px] mx-auto transition-all dark:text-slate-300 text-slate-950 grid grid-cols-1 gap-4 lg:gap-8 sm:grid-cols-2 lg:grid-cols-4 mt-24"
+>
+  {
+    about.map((board) => {
+      const route = `/about/${board.slug}`;
+      const boarImagen = `board ${board.slug} image`;
+      const boardTitulo = `board ${board.slug} title`;
+      return (
+        <a href={route} class="overflow-hidden  rounded-lg ">
+          <div class=" p-4">
+            <Image
+              class="rounded-lg shadow hover:shadow-2xl duration-500 hover:-translate-y-4"
+              transition:name={boarImagen}
+              src={board.data.cover}
+              alt={board.data.coverAlt}
+              quality={"mid"}
+              format="avif"
+              loading={"lazy"}
+            />
+
+            <p transition:name={boardTitulo} class="text-md  mt-4 ">
+              {board.data.title}
+            </p>
+          </div>
+        </a>
+      );
+    })
+  }
+</div>

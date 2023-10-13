@@ -1,0 +1,22 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Mision from "@components/about/Mision.astro";
+import Board from "@components/about/Board.astro";
+import { getCollection } from "astro:content";
+const about = await getCollection("about");
+---
+
+<Layout title="About">
+  <div class="px-4 mx-auto md:px-6">
+    <Mision />
+    <div class="mx-auto max-w-[1400px] mb-12">
+      <h1
+        class="transition-all duration-300 font-extrabold text-xl my-4
+         dark:text-sky-400 text-sky-600 xl:prose-xl"
+      >
+        The Projec Amigo México Board
+      </h1>
+      <Board about={about} />
+    </div>
+  </div>
+</Layout>

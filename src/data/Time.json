@@ -1,0 +1,114 @@
+{
+  "Fechas2024": [
+    {
+      "date": "January 14-21, 2024 Sun/Sun",
+      "name": "English Tutoring I"
+    },
+    {
+      "date": "January 28 - February 4, 2024 Sun/Sun",
+      "name": "English Tutoring II"
+    },
+    {
+      "date": "February 18 -25, 2024 Sun/Sun",
+      "name": "Construction & Cooking I (Boise Sunrise Club)"
+    },
+    {
+      "date": "March 3 – 10, 2024 Sun/Sun",
+      "name": "Rotary District Governors (Private Week)"
+    },
+    {
+      "date": "March 17 – 24, 2024 Sun/Sun",
+      "name": "Alaska (Private Week)"
+    },
+    {
+      "date": "April 7 – 14, 2024 Sun/Sun",
+      "name": "Novato Rotary Club (Private Week)"
+    },
+    {
+      "date": "June 23 – June 30, 2024 Sun/Sun",
+      "name": "English as a Second Language I"
+    },
+    {
+      "date": "June 30 – July 7, 2024 Sun/Sun",
+      "name": "English as a Second Language II"
+    },
+    {
+      "date": "July 28 – August 4, 2024 Sun/Sun",
+      "name": "Swim & Back to School"
+    },
+    {
+      "date": "September 11 – 18, 2024 Wed/Wed",
+      "name": "Mexican Cooking & Celebrate Mexican Independence"
+    },
+    {
+      "date": "October 27 – November 3, 2024 Sun/Sun",
+      "name": "Dia de Los Muertos & Cooking"
+    },
+    {
+      "date": "December 8 – 15, 2024 Sun/Sun",
+      "name": "Christmas Fiesta"
+    }
+  ],
+  "Fechas2025": [
+    {
+      "date": "January 12 -19, 2025 Sun/Sun",
+      "name": "English Tutoring I"
+    },
+    {
+      "date": "January 19 – February 26, 2025 Sun/Sun",
+      "name": "English Tutoring II"
+    },
+    {
+      "date": "February 2 -9, 2025 Sun/Sun",
+      "name": "Literature & Culture"
+    },
+    {
+      "date": "February 16 -23, 2025 Sun/Sun",
+      "name": "Canada Week"
+    },
+    {
+      "date": "March 2 – 9, 2025 Sun/Sun",
+      "name": "Traditional Mexican Cooking"
+    },
+    {
+      "date": "March 16 - 23, 2025 Sun/Sun",
+      "name": "Community Service"
+    },
+    {
+      "date": "April 13 – 20, 2025 Sun/Sun",
+      "name": "Community & Culture Holy Week"
+    },
+    {
+      "date": "May 4 - 11, 2025 Sun/Sun",
+      "name": "Community & Culture Cinco de Mayo"
+    },
+    {
+      "date": "July 6 - 13, 2025 Sun/Sun",
+      "name": "English as a Second Language 1"
+    },
+    {
+      "date": "July 13 – July 20, 2025 Sun/Sun",
+      "name": "English as a Second Language II"
+    },
+    {
+      "date": "July 27 – August 3, 2025 Sun/Sun",
+      "name": "Swim Week & Back to School"
+    },
+    {
+      "date": "September 10 – 17, 2025 Wed/Wed",
+      "name": "Mexican Cooking & Mexican Independence Day"
+    },
+    {
+      "date": "October 5 – 12, 2025 Sun/Sun",
+      "name": "Literacy & Culture"
+    },
+    {
+      "date": "October 29 – November 5, 2025 Sun/Sun",
+      "name": "Día de Los Muertos & Cooking"
+    },
+    {
+      "date": "December 7 – 14, 2025 Sun/Sun",
+      "name": "Christmas Fiesta"
+    }
+  ]
+}

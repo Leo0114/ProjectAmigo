@@ -1,0 +1,90 @@
+---
+import { Image } from "astro:assets";
+import uno from "@assets/gale1.webp";
+import dos from "@assets/gale2.webp";
+import sado from "@assets/gale4.webp";
+---
+
+<div class="max-w-[1400px] mx-auto">
+  <div class="flex flex-col pt-12">
+    <div>
+      <div class="rounded-lg h-80 overflow-hidden">
+        <Image
+          alt="content"
+          class="object-center h-full w-full object-cover"
+          src={uno}
+        />
+      </div>
+
+      <div class="transition-all duration-300 mx-auto">
+        <div class="dark:text-slate-300 text-slate-950 prose-lg">
+          <div>
+            <p>
+              Project Amigo apoya a estudiantes de Colima, México para que
+              puedan crear sus propias oportunidades educativas y mejorar su
+              calidad de vida. Para ello, eliminamos las barreras financieras a
+              la educación a través de becas que incluyen cuotas escolares,
+              transporte, uniformes y útiles escolares, y un almuerzo caliente.
+              Nuestro personal también brinda tutoría y tutoría durante el Club
+              de Tareas del Proyecto Amigo. Los clubes de tareas también nos
+              brindan una manera de mantenernos en contacto cercano con los
+              estudiantes para que podamos identificar los problemas antes de
+              que se vuelvan tan graves que el estudiante se vea obligado a
+              abandonar la escuela.
+            </p><p>
+              También brindamos oportunidades para que los voluntarios de otros
+              países realicen un valioso servicio humanitario que crea y fomenta
+              la amistad y el entendimiento entre culturas.
+            </p>
+          </div>
+          <div class="flex flex-wrap">
+            <div class="w-full md:w-1/2">
+              <p>
+                La educación y la alfabetización son herramientas poderosas para
+                crear un futuro más brillante para los niños del mundo que a su
+                vez benefician a las naciones en las que viven. Desde 1984,
+                Project Amigo ha trabajado con jóvenes rurales en México para
+                continuar su educación formal, incluido el nivel universitario.
+                Project Amigo se convirtió en una organización benéfica sin
+                fines de lucro 501c3 de los EE. UU. En 1996, que brinda becas
+                educativas, apoyo material, actividades de enriquecimiento y
+                atención médica a jóvenes desfavorecidos en el estado de Colima,
+                México.
+              </p>
+              <p>
+                Las Semanas de Trabajo Voluntario basadas en nuestra sede en el
+                hermoso pueblo de Cofradía de Suchitlán, en la ladera de una
+                colina, permiten a voluntarios de otros países participar en el
+                servicio humanitario y convertirse en amigos y patrocinadores de
+                la juventud mexicana que busca las muchas ventajas de la
+                educación.
+              </p>
+              <p>
+                ¡Los niños de Colima y el personal de Project Amigo esperan
+                ansiosamente verte en 2022! La comida y el alojamiento son
+                excelentes, como siempre. Cuando esté aquí, lo trataremos como a
+                una familia, así que únase a nosotros en 2022. Prometemos una
+                experiencia como ninguna otra en la que trabajará junto con el
+                personal para servir, leer, jugar y explorar todo lo que Colima
+                tiene para ofrecer. No se requiere español, solo una mente
+                abierta a las posibilidades. El calendario de las semanas de
+                servicios (antes conocido como semanas laborales) está
+                actualizado.
+              </p>
+            </div>
+            <div class="w-full md:w-1/2 lg:pl-12">
+              <Image
+                src={dos}
+                alt="colima map"
+                quality={"mid"}
+                class={" rounded-lg mx-auto w-full md:w-auto"}
+                format="avif"
+              />
+            </div>
+          </div>
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,81 @@
+---
+import { Image } from "astro:assets";
+import uno from "@assets/sponsor.webp";
+import dos from "@assets/sponsor2.webp";
+import tre from "@assets/sponsor3.webp";
+import cuatro from "@assets/sponsor4.webp";
+---
+
+<div class="grid-cols-1 sm:grid md:grid-cols-4">
+  <div class="mx-3 mt-6 flex flex-col sm:shrink-0 sm:grow sm:basis-0">
+    <a
+      href="https://bestbath.com/"
+      target="_blank"
+      class="hover:scale-105 ease-in-out
+    transition-all duration-300"
+    >
+      <Image
+        class="h-40 rounded-lg w-full object-cover object-center"
+        src={uno}
+        alt="sponsor image"
+        quality={"low"}
+        loading={"lazy"}
+        format="avif"
+      />
+    </a>
+  </div>
+
+  <div class="mx-3 mt-6 flex flex-col sm:shrink-0 sm:grow sm:basis-0">
+    <a
+      href="https://www.organicsunlimited.com/"
+      target="_blank"
+      class="hover:scale-105 ease-in-out
+    transition-all duration-300"
+    >
+      <Image
+        class="h-40 rounded-lg w-full object-cover object-center"
+        src={dos}
+        alt="sponsor image"
+        quality={"low"}
+        loading={"lazy"}
+        format="avif"
+      />
+    </a>
+  </div>
+
+  <div class="mx-3 mt-6 flex flex-col sm:shrink-0 sm:grow sm:basis-0">
+    <a
+      href="https://automatedaquatics.com/"
+      target="_blank"
+      class="hover:scale-105 ease-in-out
+    transition-all duration-300"
+    >
+      <Image
+        class="h-40 rounded-lg w-full object-cover object-center"
+        src={tre}
+        alt="sponsor image"
+        quality={"low"}
+        loading={"lazy"}
+        format="avif"
+      />
+    </a>
+  </div>
+
+  <div class="mx-3 mt-6 flex flex-col sm:shrink-0 sm:grow sm:basis-0">
+    <a
+      href="https://www.newseasonsmarket.com/"
+      target="_blank"
+      class="hover:scale-105 ease-in-out
+    transition-all duration-300"
+    >
+      <Image
+        class="h-40 rounded-lg w-full object-cover object-center"
+        src={cuatro}
+        alt="sponsor image"
+        quality={"low"}
+        loading={"lazy"}
+        format="avif"
+      />
+    </a>
+  </div>
+</div>

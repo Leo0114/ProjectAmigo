@@ -1,0 +1,67 @@
+---
+import Return from "@components/layout/Return.astro";
+import Layout from "@layouts/Layout.astro";
+
+import { Image } from "astro:assets";
+import { type CollectionEntry, getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const about = await getCollection("about");
+  const paths = about.map((aba) => {
+    return {
+      params: {
+        slug: aba.slug,
+      },
+      props: {
+        aba,
+      },
+    };
+  });
+  return paths;
+}
+type Props = { aba: CollectionEntry<"about"> };
+const { aba } = Astro.props;
+const boarImagen = `board ${aba.slug} image`;
+const boardTitulo = `board ${aba.slug} title`;
+---
+
+<Layout title={aba.data.title}>
+  <Return link="/aboutUs" />
+  <section class="mx-auto lg:w-10/12 w-10/12 h-screen max-w-[1400px] pt-12">
+    <div class="container mx-auto flex px-5 md:flex-row flex-col items-center">
+      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
+        <Image
+          transition:name={boarImagen}
+          quality={"mid"}
+          loading={"lazy"}
+          format="avif"
+          alt={aba.data.coverAlt}
+          src={aba.data.cover}
+          class="object-cover object-center rounded-lg shadow-md mx-auto"
+        />
+      </div>
+
+      <div
+        class="mx-auto lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center"
+      >
+        <h1
+          transition:name={boardTitulo}
+          class="title-font sm:text-4xl text-3xl mb-4 font-medium dark:text-slate-300 text-slate-950"
+        >
+          {aba.data.title}
+        </h1>
+        <h1>{aba.data.position}</h1>
+        <a
+          href="mailto:jorge@projectamigo.org"
+          target="_blank"
+          class="text-sky-600 dark:text-sky-400 py-2">{aba.data.email}</a
+        >
+        <p
+          class="prose-2xl mb-8 leading-relaxed text-lg text-justify dark:text-slate-300 text-slate-950"
+        >
+          {aba.body}
+        </p>
+      </div>
+    </div>
+  </section>
+</Layout>

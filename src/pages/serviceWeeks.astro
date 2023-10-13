@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import TimeLine from "@components/weeks/TimeLine.astro";
+import Fechas from "@components/weeks/Fechas.astro";
+import Weeks from "@components/weeks/Weeks.astro";
+import { getCollection } from "astro:content";
+const weeks = await getCollection("weeks");
+---
+
+<Layout title="Service Weeks">
+  <div class="px-4 mx-auto md:px-6">
+    <Fechas />
+    <Weeks weeks={weeks} />
+    <div>
+      <h3
+        class="font-extrabold my-4 text-sky-400 prose-2xl mx-auto text-center"
+      >
+        Declaración de la misión de Project Amigo
+      </h3>
+      <TimeLine />
+    </div>
+  </div>
+</Layout>
