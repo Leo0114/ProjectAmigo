@@ -1,6 +1,6 @@
 ---
 import Return from "@components/layout/Return.astro";
-import Layout from "@layouts/Layout.astro";
+import Layout2 from "@layouts/Layout2.astro";
 
 import { Image } from "astro:assets";
 import { type CollectionEntry, getCollection } from "astro:content";
@@ -25,11 +25,11 @@ const boarImagen = `board ${aba.slug} image`;
 const boardTitulo = `board ${aba.slug} title`;
 ---
 
-<Layout title={aba.data.title}>
+<Layout2 title={aba.data.title}>
   <Return link="/aboutUs#board" />
-  <section class="mx-auto lg:w-10/12 w-10/12 h-screen max-w-[1400px] pt-12">
-    <div class="container mx-auto flex px-5 md:flex-row flex-col items-center">
-      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 md:mb-0 mb-10">
+  <section class="py-16 md:px-8 lg:py-8 max-w-[1400px] px-4">
+    <div class="container mx-auto grid items-center lg:grid-cols-2">
+      <picture class="pl-40">
         <Image
           transition:name={boarImagen}
           quality={"mid"}
@@ -37,13 +37,11 @@ const boardTitulo = `board ${aba.slug} title`;
           format="avif"
           alt={aba.data.coverAlt}
           src={aba.data.cover}
-          class="object-cover object-center rounded-lg shadow-md mx-auto"
+          class="rounded-xl object-cover object-center h-[400px] w-[400px]"
         />
-      </div>
+      </picture>
 
-      <div
-        class="mx-auto lg:flex-grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center"
-      >
+      <div class="row-start-2 mt-12 lg:row-auto lg:mt-0 lg:pl-12">
         <h1
           transition:name={boardTitulo}
           class="title-font sm:text-4xl text-3xl mb-4 font-medium dark:text-slate-300 text-slate-950"
@@ -64,4 +62,4 @@ const boardTitulo = `board ${aba.slug} title`;
       </div>
     </div>
   </section>
-</Layout>
+</Layout2>

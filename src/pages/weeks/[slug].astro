@@ -1,7 +1,7 @@
 ---
 import Botton from "@components/layout/Botton.astro";
 import Return from "@components/layout/Return.astro";
-import Layout from "@layouts/Layout.astro";
+import Layout2 from "@layouts/Layout2.astro";
 import { Image } from "astro:assets";
 import { type CollectionEntry, getCollection } from "astro:content";
 
@@ -25,47 +25,62 @@ const imagen = `week ${week.slug} image`;
 const titulo = `week ${week.slug} title`;
 ---
 
-<Layout title={week.data.title}>
+<Layout2 title={week.data.title}>
   <Return link="/serviceWeeks#week" />
-  <div
-    class="container max-w-[1400px] my-24 mx-auto md:px-6 prose-xl transition-all duration-300 dark:text-slate-300 text-slate-950"
-  >
-    <section class="mb-32 items-center">
-      <Image
-        src={week.data.cover}
-        class="mb-6 lg:w-1/3 w-fit mx-auto rounded-lg shadow-lg dark:shadow-black/20"
-        transition:name={imagen}
-        alt={week.data.coverAlt}
-        quality={"mid"}
-        format="avif"
-        loading={"lazy"}
-      />
-
-      <div class="mx-auto px-4 text-center">
-        <Botton
-          name="Registrar aquí"
-          link="https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E55454&id=19"
-        />
-      </div>
-      <div class="mb-6 flex items-center">
-        <div>
-          <p class="dark:text-sky-400 text-sky-600">{week.data.dia}</p>
-          <p>Encargado: {week.data.encargado}</p>
+  <div class="max-w-[1400px] mx-auto px-4 md:px-8">
+    <div class="mx-auto max-w-3xl text-center">
+      <h1
+        transition:name={titulo}
+        class="text-3xl lg:text-4xl font-bold lg:tracking-tight mt-1 lg:leading-tight"
+      >
+        {week.data.title}
+      </h1>
+      <div
+        class="flex gap-2 mt-3 items-center justify-center text-sm flex-wrap md:flex-nowrap"
+      >
+        <span class="text-slate-400">Encargado: {week.data.encargado}</span
+        ><span class="text-slate-400">•</span><time
+          class="dark:text-sky-400 text-sky-600">{week.data.dia}</time
+        ><span class="text-slate-400 hidden md:block">•</span><div
+          class="w-full md:w-auto flex flex-wrap justify-center gap-3"
+        >
           <a
             target="_blank"
             href=`mailto:${week.data.correoEncargado}`
-            class="font-medium dark:text-sky-400 text-sky-600 underline"
+            class="text-slate-400 hover:underline"
             >{week.data.correoEncargado}</a
           >
         </div>
       </div>
-      <h1 class="mb-6 text-3xl font-extrabold" transition:name={titulo}>
-        {week.data.title}
-      </h1>
+    </div>
 
+    <div class="mx-auto max-w-4xl">
+      <picture
+        ><Image
+          src={week.data.cover}
+          class="h-full w-full object-contain rounded-xl mt-6"
+          width="1280"
+          height="800"
+          transition:name={imagen}
+          alt={week.data.coverAlt}
+          quality={"mid"}
+          format="avif"
+          loading={"lazy"}
+        /></picture
+      >
+    </div>
+
+    <div class="mx-auto prose-lg mt-6 px-4 md:px-8 max-w-[1400px]">
       <p>
         {week.body}
       </p>
-    </section>
+    </div>
+
+    <div class="mx-auto px-4 text-center py-8">
+      <Botton
+        name="Registrar aquí"
+        link="https://interland3.donorperfect.net/weblink/WebLink.aspx?name=E55454&id=19"
+      />
+    </div>
   </div>
-</Layout>
+</Layout2>

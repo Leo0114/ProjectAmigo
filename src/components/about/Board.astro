@@ -9,8 +9,7 @@ const { about } = Astro.props;
 
 <div
   class="text-center mx-auto transition-all
-   dark:text-slate-300 text-slate-950 grid grid-cols-1
-   gap-10 sm:grid-cols-2 lg:grid-cols-4"
+   dark:text-slate-300 text-slate-950 grid md:grid-cols-4 gap-10 mt-12"
 >
   {
     about.map((board) => {
@@ -19,20 +18,22 @@ const { about } = Astro.props;
       const boardTitulo = `board ${board.slug} title`;
       return (
         <a href={route} class="overflow-hidden  rounded-lg ">
-          <div class=" p-4 aspect-square">
-            <Image
-              class="rounded-lg shadow hover:shadow-2xl duration-500 hover:-translate-y-4"
-              transition:name={boarImagen}
-              src={board.data.cover}
-              alt={board.data.coverAlt}
-              quality={"mid"}
-              format="avif"
-              loading={"lazy"}
-            />
+          <div class="group">
+            <picture class="w-full aspect-square">
+              <Image
+                class="rounded-lg shadow hover:shadow-2xl duration-500 hover:-translate-y-4 w-[380px] h-[320px]"
+                transition:name={boarImagen}
+                src={board.data.cover}
+                alt={board.data.coverAlt}
+                quality={"mid"}
+                format="avif"
+                loading={"lazy"}
+              />
 
-            <p transition:name={boardTitulo} class="text-md mt-4 ">
-              {board.data.title}
-            </p>
+              <p transition:name={boardTitulo} class="text-md mt-4 ">
+                {board.data.title}
+              </p>
+            </picture>
           </div>
         </a>
       );
