@@ -19,3 +19,26 @@ export const about = [
     text: "Crear y fomentar la amistad y el entendimiento entre niños y adultos de países desarrollados y sus pares en Colima, México.",
   },
 ];
+
+export const imageSlide = [
+  { slide: "/Slider/navi.webp", title: "image" },
+  { slide: "/Slider/gale3.webp", title: "image2" },
+  { slide: "/Slider/dad.webp", title: "image3" },
+  { slide: "/Slider/gale5.webp", title: "image4" },
+  { slide: "/Slider/gale1.webp", title: "image5" },
+];
+
+export const CarouselSlide = [
+  {
+    carousel: "/Carrousel/one.webp",
+    title: "Slide",
+  },
+  {
+    carousel: "/Carrousel/four.webp",
+    title: "Slide2",
+  },
+  {
+    carousel: "./Carrousel/two.webp",
+    title: "Slide3",
+  },
+];

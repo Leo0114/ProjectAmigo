@@ -7,8 +7,8 @@ type Props = {
 const { weeks } = Astro.props;
 ---
 
-<div class="container mx-auto mb-12 max-w-[1400px]">
-  <div class="grid gap-6 lg:grid-cols-3">
+<div class="container mx-auto mb-12 max-w-[1400px] px-4 md:px-8">
+  <div class="grid gap-10 lg:grid-cols-3">
     {
       weeks.map((week) => {
         const route = `/weeks/${week.slug}`;

@@ -1,21 +1,62 @@
 ---
-import datos from "@assets/data.webp";
+import image1 from "@assets/chmx.webp";
 import { Image } from "astro:assets";
 ---
 
-<section
-  class="min-w-[1400px] flex flex-col min-h-screen bg-slate-800 text-white bg-center bg-cover bg-blend-overlay bg-fixed bg-black/30"
-  style="background-image: url('https://source.unsplash.com/random/')"
->
-  <!-- Hero Section Content -->
-  <div class="flex-auto flex items-center">
-    <div class="text-center mx-auto">
-      <h1 class="text-6xl font-semibold">Welcome to my site!</h1>
-      <p class="font-light text-3xl mt-5">The land of opportunity.</p>
-      <a
-        class="px-5 py-2 inline-block bg-cyan-500 text-white hover:bg-cyan-400 transition-colors mt-10"
-        href="">Get Started</a
-      >
-    </div>
+<div class="grid sm:grid-cols-2 gap-10 mx-auto">
+  <div class="relative">
+    <picture>
+      <Image
+        src={image1}
+        alt="Happy Team"
+        class="rounded-xl w-full max-w-md mx-auto shadow-2xl"
+        loading="lazy"
+        width="1270"
+        height="1652"
+        format="avif"
+      />
+    </picture>
   </div>
-</section>
+  <div class="place-self-center">
+    <h2 class="text-5xl text-gray-800 tracking-tight -mt-2">
+      <span class="text-indigo-600">Our</span>
+      <strong>Mission</strong>
+    </h2><p class="text-lg max-w-xl mt-4 leading-relaxed text-slate-500">
+      We're a multi-cultural team from around the world! We come from diverse
+      backgrounds, bringing different personalities, experiences and skills to
+      the job. This is what makes our team so special.
+    </p><ul class="grid mt-6 text-left gap-y-4">
+      <li class="flex items-center gap-3 text-slate-800">
+        <svg
+          viewBox="0 0 256 256"
+          class="w-5 h-5"
+          astro-icon="ph:check-circle-fill"
+          ><path
+            fill="currentColor"
+            d="M128 24a104 104 0 1 0 104 104A104.2 104.2 0 0 0 128 24zm49.5 85.8-58.6 56a8.1 8.1 0 0 1-5.6 2.2 7.7 7.7 0 0 1-5.5-2.2l-29.3-28a8 8 0 1 1 11-11.6l23.8 22.7 53.2-50.7a8 8 0 0 1 11 11.6z"
+          ></path></svg
+        ><span class="text-slate-600">Intelligent Task Management</span>
+      </li><li class="flex items-center gap-3 text-slate-800">
+        <svg
+          viewBox="0 0 256 256"
+          class="w-5 h-5"
+          astro-icon="ph:check-circle-fill"
+          ><path
+            fill="currentColor"
+            d="M128 24a104 104 0 1 0 104 104A104.2 104.2 0 0 0 128 24zm49.5 85.8-58.6 56a8.1 8.1 0 0 1-5.6 2.2 7.7 7.7 0 0 1-5.5-2.2l-29.3-28a8 8 0 1 1 11-11.6l23.8 22.7 53.2-50.7a8 8 0 0 1 11 11.6z"
+          ></path></svg
+        ><span class="text-slate-600">Real-time Collaboration</span>
+      </li><li class="flex items-center gap-3 text-slate-800">
+        <svg
+          viewBox="0 0 256 256"
+          class="w-5 h-5"
+          astro-icon="ph:check-circle-fill"
+          ><path
+            fill="currentColor"
+            d="M128 24a104 104 0 1 0 104 104A104.2 104.2 0 0 0 128 24zm49.5 85.8-58.6 56a8.1 8.1 0 0 1-5.6 2.2 7.7 7.7 0 0 1-5.5-2.2l-29.3-28a8 8 0 1 1 11-11.6l23.8 22.7 53.2-50.7a8 8 0 0 1 11 11.6z"
+          ></path></svg
+        ><span class="text-slate-600">Data Security &amp; Privacy</span>
+      </li>
+    </ul>
+  </div>
+</div>
