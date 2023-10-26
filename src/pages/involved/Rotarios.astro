@@ -4,10 +4,13 @@ import Rotary from "@components/involved/Rotary.astro";
 import ImageSlider from "@components/layout/ImageSlider";
 import { Image } from "astro:assets";
 import rotaryLogo from "@assets/rotaryLogo.png";
+import Return from "@components/layout/Return.astro";
 ---
 
 <Layout title="Rotary">
   <div class="py-12 max-w-[1400px] mx-auto prose lg:prose-lg px-4 md:px-8">
+    <Return link="/getInvolved#getin" />
+
     <div class="text-center flex items-center justify-center">
       <h1
         class="text-5xl md:text-6xl font-semibold transition-all duration-300 text-sky-600 dark:text-sky-800"
@@ -26,7 +29,7 @@ import rotaryLogo from "@assets/rotaryLogo.png";
 
     <div>
       <p
-        class="prose-xl transition-all duration-300 dark:text-slate-300 text-slate-950 mx-auto px-4"
+        class="prose-lg transition-all duration-300 dark:text-slate-300 text-slate-950 mx-auto px-4"
       >
         Su longevidad a las contribuciones de “servicio por encima de uno mismo”
         de miles de rotarios y clubes rotarios. Fuimos el “proyecto” de servicio
@@ -42,7 +45,7 @@ import rotaryLogo from "@assets/rotaryLogo.png";
         generosa y eficaz más allá de uno mismo.
       </p>
       <p
-        class="prose-xl transition-all duration-300 dark:text-slate-300 text-slate-950 mx-auto px-4"
+        class="prose-lg transition-all duration-300 dark:text-slate-300 text-slate-950 mx-auto px-4"
       >
         Los rotarios individuales y los clubes rotarios pueden:
       </p>

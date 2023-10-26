@@ -1,7 +1,6 @@
 ---
 import Return from "@components/layout/Return.astro";
 import Layout2 from "@layouts/Layout2.astro";
-import SocialMedia from "@components/layout/SocialMedia.astro";
 
 import { Image } from "astro:assets";
 import { type CollectionEntry, getCollection } from "astro:content";
@@ -44,7 +43,7 @@ const boardTitulo = `board ${aba.slug} title`;
             {aba.data.position}
           </div>
           <h2
-            class="text-xl leading-relaxed font-medium text-gray-700 dark:text-gray-300"
+            class="text-xl leading-relaxed font-medium text-gray-700 dark:text-gray-300prose lg:prose-lg mx-auto"
           >
             {aba.body}
           </h2>
