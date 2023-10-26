@@ -5,6 +5,7 @@ position: Creador
 cover: "./images/ted.webp"
 coverAlt: "Imagen"
 email: Ted@projectamigo.org
+facebook: "https://www.facebook.com/torrespreciadoj"
 ---
 
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores

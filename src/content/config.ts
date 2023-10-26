@@ -9,6 +9,7 @@ const boardCollection = defineCollection({
       cover: image(),
       coverAlt: z.string(),
       email: z.string(),
+      facebook: z.string(),
     }),
 });
 

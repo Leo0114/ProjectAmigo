@@ -5,6 +5,7 @@ position: Presidente 2
 cover: "./images/anilu.webp"
 coverAlt: "Imagen"
 email: anilu@projectamigo.org
+facebook: "https://www.facebook.com/torrespreciadoj"
 ---
 
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores

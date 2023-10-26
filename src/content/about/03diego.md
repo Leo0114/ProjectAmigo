@@ -5,6 +5,7 @@ position: Presidente 03
 cover: "./images/diego.webp"
 coverAlt: "Imagen"
 email: diego@projectamigo.org
+facebook: "https://www.facebook.com/torrespreciadoj"
 ---
 
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores

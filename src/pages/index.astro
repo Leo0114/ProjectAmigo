@@ -4,13 +4,17 @@ import Layout from "../layouts/Layout.astro";
 import Banner from "@components/aba/Banner.astro";
 import SliderSection from "@components/layout/SliderSection.astro";
 import Historial from "@components/aba/Historial.astro";
+import Cardo from "@components/aba/Cardo.astro";
+import Mas from "@components/aba/Mas.astro";
 ---
 
 <Layout title="Home">
+  <Cardo />
   <div class="px-4 mx-auto md:px-8 container">
     <Promo />
     <SliderSection />
     <Historial />
   </div>
+  <Mas />
   <Banner />
 </Layout>

@@ -4,42 +4,42 @@ import { Image } from "astro:assets";
 import Botton from "@components/layout/Botton.astro";
 ---
 
-<section class="transition-all prose-xl px-4 md:px-8">
-  <div class="container mx-auto flex md:flex-row flex-col items-center">
-    <div
-      class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-8 md:mb-0 items-center text-center"
-    >
-      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium">
-        <span class="text-sky-600">Project Amigo</span>
-        <br class="hidden lg:inline-block text-sky-600" />
-         Transformando vidas a través de la educación
-      </h1>
-      <div class="mb-4 leading-relaxed text-left">
-        <p>
-          Somos una organización sin fines de lucro con una misión clara: apoyar
-          a estudiantes en Colima, México, para que construyan un futuro mejor a
-          través de la educación. A su ves creamos oportunidades para que
-          voluntarios de todo el mundo participen en un valioso servicio
-          humanitario, fomentando la amistad y el entendimiento entre culturas.
-        </p>
-      </div>
-
-      <div class="flex justify-center">
-        <Botton
-          name="Donate"
-          link="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E55454&id=12"
-        />
+<div>
+  <div
+    class="grid grid-cols-1 lg:grid-cols-2 gap-12 container xl:max-w-[1400px] mx-auto px-4 py-16 md:px-8"
+  >
+    <div class="flex items-center text-center lg:text-left">
+      <div class="space-y-8">
+        <div>
+          <h2 class="text-4xl font-black pb-2">
+            Transformando vidas a través de la educación <span
+              class="text-sky-600 dark:text-sky-500">Project Amigo</span
+            >
+          </h2>
+          <h3
+            class="text-xl leading-relaxed font-medium text-gray-700 dark:text-gray-300"
+          >
+            Somos una organización sin fines de lucro con una misión clara:
+            apoyar a estudiantes en Colima, México, para que construyan un
+            futuro mejor a través de la educación. A su ves creamos
+            oportunidades para que voluntarios de todo el mundo participen en un
+            valioso servicio humanitario, fomentando la amistad y el
+            entendimiento entre culturas.
+          </h3>
+        </div>
       </div>
     </div>
-    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-      <Image
-        class="object-cover object-center rounded-xl"
-        alt="hero"
-        src={para}
-        quality={"mid"}
-        format="avif"
-        loading={"lazy"}
-      />
+    <div class="flex items-center lg:justify-end">
+      <picture class="mx-5 lg:w-8/12">
+        <Image
+          class="relative rounded-lg mx-auto shadow-lg"
+          alt="hero"
+          src={para}
+          quality={"mid"}
+          format="avif"
+          loading={"lazy"}
+        />
+      </picture>
     </div>
   </div>
-</section>
+</div>

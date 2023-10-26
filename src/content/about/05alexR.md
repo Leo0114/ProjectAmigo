@@ -5,6 +5,7 @@ position: Jefe
 cover: "./images/alexR.webp"
 coverAlt: "Imagen"
 email: AlexR@projectamigo.org
+facebook: "https://www.facebook.com/torrespreciadoj"
 ---
 
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores
