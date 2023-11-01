@@ -1,0 +1,47 @@
+---
+import Botton from "@components/layout/Botton.astro";
+---
+
+<section class="home cursor-default px-8 text-white gap-4">
+  <h1 class="slogan text-6xl font-semibold">
+    Transformando vidas a través de la educación <span
+      class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 from-10%
+      via-primary via-50% to-sky-400"
+      >Project Amigo</span
+    >
+  </h1>
+  <p class="max-w-2xl text-center parrafo">
+    Make a difference in the life of a child. Give to Project Amigo Today.
+  </p>
+
+  <div class="flex gap-6 mt-3">
+    <Botton
+      name="Donate"
+      link="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E55454&id=12"
+    />
+  </div>
+</section>
+
+<style>
+  .home {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+      ),
+      url(/Carrousel/four.webp);
+    width: 100%;
+    min-height: calc(100vh - 52px);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .slogan {
+    max-width: 850px;
+    text-align: center;
+  }
+</style>
