@@ -32,23 +32,39 @@ const boardTitulo = `board ${aba.slug} title`;
       class="relative flex flex-col lg:flex-row space-y-8 lg:space-y-0 text-center
       lg:text-left container xl:max-w-[1400px] mx-auto px-4 py-16 md:px-8"
     >
+      <div class="lg:w-1/2 lg:mr-16 lg:flex lg:justify-center lg:items-center">
+        <div class="relative mx-5 lg:w-96">
+          <Image
+            class="relative rounded-lg mx-auto shadow-lg"
+            transition:name={boarImagen}
+            quality={"mid"}
+            loading={"lazy"}
+            format="avif"
+            alt={aba.data.coverAlt}
+            src={aba.data.cover}
+          />
+        </div>
+      </div>
       <div class="lg:w-1/2 lg:flex lg:items-center">
         <div>
           <h1 class="text-4xl font-black mb-4" transition:name={boardTitulo}>
             {aba.data.title}
           </h1>
-          <div
-            class="text-sm rounded text-gray-800 bg-gray-100 border border-gray-200 font-medium inline-flex px-2 py-1 leading-4 mb-2 dark:text-gray-200 dark:bg-gray-700/50 dark:border-gray-600/50"
+          <p
+            class="text-sm rounded text-gray-800 bg-gray-100 border border-gray-200 font-medium
+            inline-flex px-2 py-1 leading-4 mb-2 dark:text-gray-200
+             dark:bg-gray-700/50 dark:border-gray-600/50"
           >
             {aba.data.position}
-          </div>
+          </p>
           <h2
-            class="text-xl leading-relaxed font-medium text-gray-700 dark:text-gray-300prose lg:prose-lg mx-auto"
+            class="text-xl leading-relaxed font-medium text-gray-700 dark:text-gray-300 prose lg:prose-lg mx-auto"
           >
             {aba.body}
           </h2>
           <div
-            class="flex flex-col sm:flex-row sm:items-center justify-center lg:justify-start space-y-2 sm:space-y-0 sm:space-x-2 pt-10 pb-16"
+            class="flex flex-col sm:flex-row sm:items-center justify-center
+             lg:justify-start space-y-2 sm:space-y-0 sm:space-x-4 pt-10 pb-16"
           >
             <a
               target="_blank"
@@ -65,7 +81,6 @@ const boardTitulo = `board ${aba.slug} title`;
                   d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"
                 ></path>
               </svg>
-              <span>Facebook</span>
             </a>
             <a
               target="_blank"
@@ -82,22 +97,8 @@ const boardTitulo = `board ${aba.slug} title`;
                   d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"
                 ></path>
               </svg>
-              <span>Correo</span>
             </a>
           </div>
-        </div>
-      </div>
-      <div class="lg:w-1/2 lg:ml-16 lg:flex lg:justify-center lg:items-center">
-        <div class="relative mx-5 lg:w-96">
-          <Image
-            class="relative rounded-lg mx-auto shadow-lg"
-            transition:name={boarImagen}
-            quality={"mid"}
-            loading={"lazy"}
-            format="avif"
-            alt={aba.data.coverAlt}
-            src={aba.data.cover}
-          />
         </div>
       </div>
     </div>
