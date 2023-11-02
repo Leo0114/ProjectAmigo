@@ -2,7 +2,7 @@
 import { Fechas2024, Fechas2025 } from "@data/Time.json";
 ---
 
-<div class="container max-w-[1400px] px-4 mx-auto pb-16">
+<div class="container max-w-[1400px] px-4 mx-auto">
   <div class="grid gap-4 mx-4 sm:grid-cols-12">
     <div class="col-span-12 sm:col-span-6 relative px-4 space-y-6 mx-auto">
       <h1
@@ -16,8 +16,15 @@ import { Fechas2024, Fechas2025 } from "@data/Time.json";
       >
         {
           Fechas2024.map((fe) => (
-            <div class="flex flex-col sm:relative sm:before:absolute sm:before:top-2 sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px] sm:before:z-[1] before:bg-sky-400">
-              <h3 class="text-xl font-semibold  transition-all duration-300 dark:text-slate-300 text-slate-950 ">
+            <div
+              class="flex flex-col sm:relative sm:before:absolute sm:before:top-2
+             sm:before:w-4 sm:before:h-4 sm:before:rounded-full sm:before:left-[-35px]
+              sm:before:z-[1] before:bg-sky-400"
+            >
+              <h3
+                class="text-xl font-semibold  transition-all duration-300
+               dark:text-slate-300 text-slate-950 "
+              >
                 {fe.name}
               </h3>
               <time class="text-xs  uppercase transition-all duration-300 dark:text-slate-300 text-slate-950">
@@ -38,7 +45,8 @@ import { Fechas2024, Fechas2025 } from "@data/Time.json";
         2025
       </h1>
       <div
-        class="space-y-12 relative px-4 before:absolute before:top-2 before:bottom-0 before:w-0.5 before:-right-3 before:bg-gray-700"
+        class="space-y-12 relative px-4 before:absolute before:top-2
+        before:bottom-0 before:w-0.5 before:-right-3 before:bg-sky-700"
       >
         {
           Fechas2025.map((fec) => (

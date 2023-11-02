@@ -1,0 +1,57 @@
+---
+import low from "@assets/low.webp";
+import mid from "@assets/mid.webp";
+import high from "@assets/high.webp";
+import { Image } from "astro:assets";
+const incent = [
+  { image: low, title: "Incentivos", path: "/involved/01-incentivos" },
+  { image: mid, title: "Beca Educativa", path: "/involved/02-beca-educativa" },
+  {
+    image: high,
+    title: "Beca Universitaria",
+    path: "/involved/03-beca-universitaria",
+  },
+];
+---
+
+<div class="rounded-sm bg-gradient-to-b from-sky-400 to-sky-200">
+  <div
+    class="space-y-16 container max-w-[1400px] mx-auto px-4 py-16 md:px-8 lg:py-32"
+  >
+    <div class="text-center">
+      <h2 class="text-4xl font-black mb-4">Formas de ayudar</h2>
+      <h3 class="text-xl leading-relaxed font-medium lg:w-2/3 mx-auto">
+        También brindamos oportunidades para que los voluntarios de otros países
+        realicen un valioso servicio humanitario que crea y fomenta la amistad y
+        el entendimiento entre culturas.
+      </h3>
+    </div>
+
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-16 text-center max-w-[1400px] mx-auto px-4 md:px-8"
+    >
+      {
+        incent.map((i) => (
+          <a href={i.path}>
+            <span
+              class="hover:-translate-y-2 duration-500 
+            transition-all ease-in-out hover:shadow-2xl
+             inline-block rounded-full bg-white 
+             shadow-lg p-2 mb-5 dark:bg-blue-700/75 dark:shadow-blue-950"
+            >
+              <Image
+                loading={"lazy"}
+                format="avif"
+                quality={"mid"}
+                src={i.image}
+                alt="User Avatar"
+                class="inline-block  h-full w-full rounded-full aspect-square"
+              />
+            </span>
+            <h4 class="text-xl font-bold mb-0.5">{i.title}</h4>
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</div>

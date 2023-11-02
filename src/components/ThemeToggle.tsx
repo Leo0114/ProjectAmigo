@@ -22,7 +22,8 @@ export default function ThemeToggle() {
     return (
       <button
         onClick={handleClick}
-        className="  mx-auto group relative flex h-9 w-9 rounded-full transition duration-500 hover:bg-slate-950/5 dark:hover:bg-white/10"
+        className=" mx-auto group relative flex h-9 w-9 rounded-full transition
+         duration-500 hover:bg-slate-950/5 dark:hover:bg-white/10"
         aria-label="Modo oscuro"
       >
         {theme === "light" ? <MoonSht /> : <DarkSh />}

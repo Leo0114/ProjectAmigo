@@ -2,7 +2,7 @@ function DarkSh() {
   return (
     <svg
       aria-hidden="true"
-      class="transition absolute inset-0 m-auto h-5 w-5 rotate-0 scale-0 fill-white/70 opacity-0 duration-500 group-hover:opacity-100 dark:order-1 dark:rotate-180 dark:scale-100 dark:opacity-100 dark:group-hover:fill-yellow-400"
+      class="transition absolute inset-0 m-auto h-5 w-5 rotate-0 scale-0 fill-white opacity-0 duration-500 group-hover:opacity-100 dark:order-1 dark:rotate-180 dark:scale-100 dark:opacity-100 dark:group-hover:fill-yellow-400"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       viewBox="0 0 16 16"
@@ -16,7 +16,7 @@ const MoonSht = () => {
   return (
     <svg
       aria-hidden="true"
-      class="transition absolute inset-0 m-auto h-5 w-5 rotate-0 scale-95 fill-gray-500 duration-500 group-hover:fill-blue-950 dark:-rotate-180 dark:scale-0 dark:opacity-0 dark:group-hover:fill-white"
+      class="transition absolute inset-0 m-auto h-5 w-5 rotate-0 scale-95 fill-white duration-500 group-hover:fill-blue-950 dark:-rotate-180 dark:scale-0 dark:opacity-0 dark:group-hover:fill-white"
       xmlns="http://www.w3.org/2000/svg"
       fill="currentColor"
       viewBox="0 0 16 16"

@@ -2,8 +2,11 @@
 import Botton from "@components/layout/Botton.astro";
 ---
 
-<section class="home cursor-default px-8 text-white gap-4">
-  <h1 class="slogan text-6xl font-semibold">
+<section class="home px-8 text-white gap-4">
+  <h1
+    class="text-4xl md:text-6xl font-semibold px-4 md:px-8 mx-auto max-w-[1400px]
+    text-center justify-center"
+  >
     Transformando vidas a través de la educación <span
       class="text-transparent bg-clip-text bg-gradient-to-br from-blue-400 from-10%
       via-primary via-50% to-sky-400"
@@ -38,10 +41,5 @@ import Botton from "@components/layout/Botton.astro";
     flex-direction: column;
     justify-content: center;
     align-items: center;
-  }
-
-  .slogan {
-    max-width: 850px;
-    text-align: center;
   }
 </style>

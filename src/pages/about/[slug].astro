@@ -1,6 +1,6 @@
 ---
 import Return from "@components/layout/Return.astro";
-import Layout2 from "@layouts/Layout2.astro";
+import Layout from "@layouts/Layout.astro";
 
 import { Image } from "astro:assets";
 import { type CollectionEntry, getCollection } from "astro:content";
@@ -25,14 +25,14 @@ const boarImagen = `board ${aba.slug} image`;
 const boardTitulo = `board ${aba.slug} title`;
 ---
 
-<Layout2 title={aba.data.title}>
+<Layout title={aba.data.title}>
   <Return link="/aboutUs#board" />
   <div class="relative overflow-hidden">
     <div
       class="relative flex flex-col lg:flex-row space-y-8 lg:space-y-0 text-center
       lg:text-left container xl:max-w-[1400px] mx-auto px-4 py-16 md:px-8"
     >
-      <div class="lg:w-1/2 lg:mr-16 lg:flex lg:justify-center lg:items-center">
+      <div class="lg:w-1/2 lg:flex lg:justify-center lg:items-center">
         <div class="relative mx-5 lg:w-96">
           <Image
             class="relative rounded-lg mx-auto shadow-lg"
@@ -103,4 +103,4 @@ const boardTitulo = `board ${aba.slug} title`;
       </div>
     </div>
   </div>
-</Layout2>
+</Layout>

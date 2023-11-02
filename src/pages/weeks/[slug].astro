@@ -1,7 +1,7 @@
 ---
 import Botton from "@components/layout/Botton.astro";
 import Return from "@components/layout/Return.astro";
-import Layout2 from "@layouts/Layout2.astro";
+import Layout from "@layouts/Layout.astro";
 import { Image } from "astro:assets";
 import { type CollectionEntry, getCollection } from "astro:content";
 
@@ -25,7 +25,7 @@ const imagen = `week ${week.slug} image`;
 const titulo = `week ${week.slug} title`;
 ---
 
-<Layout2 title={week.data.title}>
+<Layout title={week.data.title}>
   <Return link="/serviceWeeks#week" />
   <div class="max-w-[1400px] mx-auto px-4 md:px-8">
     <div class="mx-auto max-w-3xl text-center">
@@ -71,7 +71,7 @@ const titulo = `week ${week.slug} title`;
     </div>
 
     <div class="mx-auto prose lg:prose-lg mt-6 px-4 md:px-8 max-w-[1400px]">
-      <p>
+      <p class="dark:text-slate-300 text-slate-800">
         {week.body}
       </p>
     </div>
@@ -83,4 +83,4 @@ const titulo = `week ${week.slug} title`;
       />
     </div>
   </div>
-</Layout2>
+</Layout>
