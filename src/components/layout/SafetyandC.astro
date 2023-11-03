@@ -17,9 +17,7 @@ import map from "@assets/mapcolima.webp";
     </h3>
   </div>
 
-  <div
-    class="items-center dark:text-slate-300 text-slate-950 mx-auto px-4 md:px-8"
-  >
+  <div class="items-center dark:text-slate-300 text-slate-950 mx-auto">
     <div>
       <p>
         On January 10, 2018, the U.S. State Department amended its <a
@@ -33,17 +31,17 @@ import map from "@assets/mapcolima.webp";
         part of the state, and recommends no tourism to the area.
       </p>
     </div>
-    <div class="flex flex-wrap items-center">
-      <div class="w-full md:w-1/2 lg:pr-4">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-2">
+      <div class="lg:col-span-1">
         <Image
           src={map}
           alt="colima map"
           quality={"mid"}
-          class={" rounded-lg mx-auto w-full md:w-auto"}
+          class="rounded-lg mx-auto w-full"
           format="avif"
         />
       </div>
-      <div class="w-full md:w-1/2 lg:pl-4">
+      <div class="lg:col-span-1 md:col-span-2">
         <p>
           For reference purposes, this is a map of the State of Colima. Project
           Amigo is in the mountains in the far northeast part of the State above
@@ -57,13 +55,14 @@ import map from "@assets/mapcolima.webp";
         </p>
         <p>
           The violence in Colima is a result of the drug cartels and is centered
-          in and along the coast and the boarder with Michoacan. This is at
-          least a two-hour drive from our headquarters and primary base of
-          operation. Cofradia de Suchitlan, Comala, Suchitlan and the
-          surrounding areas have experienced no violence, gang or otherwise
+          in and along the coast and the border with Michoacan. This is at least
+          a two-hour drive from our headquarters and primary base of operation.
+          Cofradia de Suchitlan, Comala, Suchitlan and the surrounding areas
+          have experienced no violence, gang or otherwise.
         </p>
       </div>
     </div>
+
     <div>
       <p>
         We take great care to ensure that visitors are not ever taken to places

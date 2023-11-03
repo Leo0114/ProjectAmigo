@@ -8,7 +8,7 @@ type Props = {
 const { weeks } = Astro.props;
 ---
 
-<div class="container mx-auto mb-12 max-w-[1400px] px-4 md:px-8">
+<div class="mx-auto mb-12 max-w-[1400px] px-4 md:px-8">
   <div class="grid gap-10 lg:grid-cols-3">
     {
       weeks.map((week) => {
@@ -17,7 +17,7 @@ const { weeks } = Astro.props;
         const titulo = `week ${week.slug} title`;
         return (
           <div
-            class="hover:scale-105 w-5/6  mx-auto  text-center duration-300 transition-all relative overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20 bg-[50%]"
+            class="hover:scale-105 w-5/6 mx-auto text-center duration-300 transition-all relative overflow-hidden rounded-lg bg-cover bg-no-repeat shadow-lg dark:shadow-black/20 bg-[50%]"
             data-te-ripple-init
             data-te-ripple-color="dark"
           >

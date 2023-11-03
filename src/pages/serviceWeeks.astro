@@ -8,14 +8,9 @@ const weeks = await getCollection("weeks");
 ---
 
 <Layout title="Service Weeks">
-  <div class="px-4 mx-auto md:px-8">
-    <Fechas />
-    <div class="py-16">
-      <h3
-        class="font-extrabold my-4 text-sky-400 prose-2xl mx-auto text-center"
-      >
-        Declaración de la misión de Project Amigo
-      </h3>
+  <Fechas />
+  <div class="px-4 mx-auto md:px-8 space-y-12">
+    <div class="py-12">
       <TimeLine />
     </div>
     <div id="week">
