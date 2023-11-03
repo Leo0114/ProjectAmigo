@@ -25,9 +25,14 @@ import { about } from "@data/about";
         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {
             about.map((a, index) => {
-              const divClasses = `p-5 md:p-7 xl:p-10 border shadow-sm rounded-lg group:transition-all duration-300 hover:border-[#089dd0] dark:bg-gray-800 dark:border-gray-800 dark:hover:border-blue-400 dark:shadow-none ${
-                index === about.length - 1 ? "sm:col-span-2 lg:col-span-1" : ""
-              }`;
+              const divClasses = `p-5 md:p-7 xl:p-10 border
+               shadow-sm rounded-lg group:transition-all duration-300
+                hover:border-[#089dd0] dark:bg-gray-800 dark:border-gray-800 
+                dark:hover:border-blue-400 dark:shadow-none ${
+                  index === about.length - 1
+                    ? "sm:col-span-2 lg:col-span-1"
+                    : ""
+                }`;
 
               return (
                 <div class={divClasses}>

@@ -25,7 +25,7 @@ const navItems = [
             format="avif"
             quality={"low"}
           />
-          <span class="prose-2xl">ProjectAmigo</span>
+          <span class="prose-2xl pl-4">ProjectAmigo</span>
         </a>
       </div>
       <ul
@@ -58,9 +58,9 @@ const navItems = [
 </footer>
 
 <script is:inline>
-const year = document.getElementById("year");
-const currentYear = new Date().getFullYear();
-if (year) {
-  year.textContent = currentYear.toString();
-}
+  const year = document.getElementById("year");
+  const currentYear = new Date().getFullYear();
+  if (year) {
+    year.textContent = currentYear.toString();
+  }
 </script>
