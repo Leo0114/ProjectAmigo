@@ -1,14 +1,10 @@
 ---
-interface Props {
-  link: string;
-}
-const { link } = Astro.props;
+
 ---
 
 <div class="flex xl:mx-8 pt-4">
   <a
-    id="goBack"
-    href={link}
+    id="enlaceRegresar"
     class="font-bold py-2 px-4 inline-flex items-center transition-all dark:hover:bg-slate-700
     rounded-full hover:bg-slate-300 hover:-translate-x-2 duration-300"
   >
@@ -26,3 +22,14 @@ const { link } = Astro.props;
     </svg>
   </a>
 </div>
+
+<script>
+  const enlaceRegresar = document.getElementById("enlace-regresar");
+
+  if (enlaceRegresar) {
+    enlaceRegresar.addEventListener("click", function (event) {
+      event.preventDefault();
+      history.back();
+    });
+  }
+</script>

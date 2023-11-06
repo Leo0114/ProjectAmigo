@@ -1,0 +1,262 @@
+---
+const navItems = [
+  { title: "Home", path: "/" },
+  { title: "Get Involved", path: "/getInvolved" },
+  { title: "Service Weeks", path: "/serviceWeeks" },
+  { title: "Safety", path: "/safety" },
+  { title: "About Us", path: "/aboutUs" },
+  { title: "Contact", path: "/contact" },
+];
+import ThemeToggle from "@components/ThemeToggle";
+import { Image } from "astro:assets";
+import paLogo from "@assets/PaLogo.webp";
+import DonateButton from "@components/DonateButton.astro";
+---
+
+<header class="top-0 z-20 transition-all py-5 shadow">
+  <div class="max-w-[1400px] mx-auto px-5">
+    <div
+      class="flex flex-col lg:flex-row justify-between items-center relative z-10"
+    >
+      <div class="flex w-full lg:w-auto items-center justify-between">
+        <a
+          href="/"
+          class="text-2xl flex items-center transition focus-visible:ring-2 focus-visible:ring-offset-2
+           focus-visible:ring-blue-500 focus-visible:outline-none focus-visible:shadow-outline-blue
+           rounded-full px-2 -ml-2"
+        >
+          <Image alt="logo" src={paLogo} class="w-12 h-auto mr-2" />
+
+          <span class="text-slate-600 dark:text-slate-200">Project</span><span
+            class="font-bold text-[#089dd0]">Amigo</span
+          ></a
+        >
+        <div class="block lg:hidden">
+          <button id="astronav-menu" aria-label="Toggle Menu"
+            ><svg
+              fill="currentColor"
+              class="w-8 h-8 text-slate-900 dark:text-slate-100"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              ><title>Toggle Menu</title><path
+                class="astronav-close-icon astronav-toggle hidden"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M18.278 16.864a1 1 0 01-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 01-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 011.414-1.414l4.829 4.828 4.828-4.828a1 1 0 111.414 1.414l-4.828 4.829 4.828 4.828z"
+              ></path><path
+                class="astronav-open-icon astronav-toggle"
+                fill-rule="evenodd"
+                d="M4 5h16a1 1 0 010 2H4a1 1 0 110-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2zm0 6h16a1 1 0 010 2H4a1 1 0 010-2z"
+              ></path></svg
+            ></button
+          >
+        </div>
+      </div>
+
+      <nav
+        class="astronav-items astronav-toggle hidden w-full lg:w-auto mt-2 lg:flex lg:mt-0"
+      >
+        <ul class="flex flex-col lg:flex-row lg:gap-3">
+          {
+            navItems.map((nav) => (
+              <li>
+                <a
+                  href={nav.path}
+                  class="flex lg:px-3 py-2 text-md text-slate-600 dark:text-slate-200 hover:text-[#089dd0] focus-visible:ring-2 focus-visible:ring-offset-2 transition focus-visible:ring-blue-500 focus-visible:outline-none focus-visible:shadow-outline-blue rounded-full"
+                >
+                  {nav.title}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+        <div class="lg:hidden flex items-center mt-3 gap-4 justify-end">
+          <ThemeToggle client:load />
+          <a
+            target="_blank"
+            href="https://interland3.donorperfect.net/weblink/weblink.aspx?name=E55454&id=12"
+            class="rounded-full text-center transition focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500 focus-visible:outline-none focus-visible:shadow-outline-blue w-full px-5 py-2 bg-[#089dd0] text-white hover:bg-blue-800"
+            >Donate</a
+          >
+        </div>
+      </nav>
+      <script data-astro-exec="">
+        (function () {
+          const closeOnClick = false;
+
+          ["DOMContentLoaded", "astro:after-swap"].forEach((event) => {
+            document.addEventListener(event, addListeners);
+          });
+
+          // Function to clone and replace elements
+          function cloneAndReplace(element) {
+            const clone = element.cloneNode(true);
+            element.parentNode.replaceChild(clone, element);
+          }
+
+          function addListeners() {
+            // Clean up existing listeners
+            const oldMenuButton = document.getElementById("astronav-menu");
+            if (oldMenuButton) {
+              cloneAndReplace(oldMenuButton);
+            }
+
+            const oldDropdownMenus =
+              document.querySelectorAll(".astronav-dropdown");
+            oldDropdownMenus.forEach((menu) => {
+              cloneAndReplace(menu);
+            });
+
+            // Mobile nav toggle
+            const menuButton = document.getElementById("astronav-menu");
+            menuButton && menuButton.addEventListener("click", toggleMobileNav);
+
+            // Dropdown menus
+            const dropdownMenus =
+              document.querySelectorAll(".astronav-dropdown");
+            dropdownMenus.forEach((menu) => {
+              const button = menu.querySelector("button");
+              button &&
+                button.addEventListener("click", (event) =>
+                  toggleDropdownMenu(event, menu, dropdownMenus)
+                );
+
+              // Handle Submenu Dropdowns
+              const dropDownSubmenus = menu.querySelectorAll(
+                ".astronav-dropdown-submenu"
+              );
+
+              dropDownSubmenus.forEach((submenu) => {
+                const submenuButton = submenu.querySelector("button");
+                submenuButton &&
+                  submenuButton.addEventListener("click", (event) => {
+                    event.stopImmediatePropagation();
+                    toggleSubmenuDropdown(event, submenu);
+                  });
+              });
+            });
+
+            // Clicking away from dropdown will remove the dropdown class
+            document.addEventListener("click", closeAllDropdowns);
+
+            if (closeOnClick) {
+              handleCloseOnClick();
+            }
+          }
+
+          function toggleMobileNav() {
+            [...document.querySelectorAll(".astronav-toggle")].forEach((el) => {
+              el.classList.toggle("hidden");
+            });
+          }
+
+          function toggleDropdownMenu(event, menu, dropdownMenus) {
+            toggleMenu(menu);
+
+            // Close one dropdown when selecting another
+            Array.from(dropdownMenus)
+              .filter((el) => el !== menu && !menu.contains(el))
+              .forEach(closeMenu);
+
+            event.stopPropagation();
+          }
+
+          function toggleSubmenuDropdown(event, submenu) {
+            event.stopPropagation();
+            toggleMenu(submenu);
+
+            // Close sibling submenus at the same nesting level
+            const siblingSubmenus = submenu
+              .closest(".astronav-dropdown")
+              .querySelectorAll(".astronav-dropdown-submenu");
+            Array.from(siblingSubmenus)
+              .filter((el) => el !== submenu && !submenu.contains(el))
+              .forEach(closeMenu);
+          }
+
+          function closeAllDropdowns(event) {
+            const dropdownMenus = document.querySelectorAll(".dropdown-toggle");
+            const dropdownParent = document.querySelectorAll(
+              ".astronav-dropdown, .astronav-dropdown-submenu"
+            );
+            const isButtonInsideDropdown = [
+              ...document.querySelectorAll(
+                ".astronav-dropdown button, .astronav-dropdown-submenu button, #astronav-menu"
+              ),
+            ].some((button) => button.contains(event.target));
+            if (!isButtonInsideDropdown) {
+              dropdownMenus.forEach((d) => {
+                // console.log("I ran", d);
+                // if (!d.contains(event.target)) {
+                d.classList.remove("open");
+                d.removeAttribute("open");
+                d.classList.add("hidden");
+                // }
+              });
+              dropdownParent.forEach((d) => {
+                d.classList.remove("open");
+                d.removeAttribute("open");
+                d.setAttribute("aria-expanded", "false");
+              });
+            }
+          }
+
+          function toggleMenu(menu) {
+            menu.classList.toggle("open");
+            const expanded = menu.getAttribute("aria-expanded") === "true";
+            menu.setAttribute("aria-expanded", expanded ? "false" : "true");
+            menu.hasAttribute("open")
+              ? menu.removeAttribute("open")
+              : menu.setAttribute("open", "");
+
+            const dropdownToggle = menu.querySelector(".dropdown-toggle");
+            const dropdownExpanded =
+              dropdownToggle.getAttribute("aria-expanded");
+            dropdownToggle.classList.toggle("hidden");
+            dropdownToggle.setAttribute(
+              "aria-expanded",
+              dropdownExpanded === "true" ? "false" : "true"
+            );
+          }
+
+          function closeMenu(menu) {
+            // console.log("closing", menu);
+            menu.classList.remove("open");
+            menu.removeAttribute("open");
+            menu.setAttribute("aria-expanded", "false");
+            const dropdownToggles = menu.querySelectorAll(".dropdown-toggle");
+            dropdownToggles.forEach((toggle) => {
+              toggle.classList.add("hidden");
+              toggle.setAttribute("aria-expanded", "false");
+            });
+          }
+
+          function handleCloseOnClick() {
+            const navMenuItems = document.querySelector(".astronav-items");
+            const navToggle = document.getElementById("astronav-menu");
+            const navLink = navMenuItems && navMenuItems.querySelectorAll("a");
+
+            const MenuIcons = navToggle.querySelectorAll(".astronav-toggle");
+
+            navLink &&
+              navLink.forEach((item) => {
+                item.addEventListener("click", () => {
+                  navMenuItems?.classList.add("hidden");
+                  MenuIcons.forEach((el) => {
+                    el.classList.toggle("hidden");
+                  });
+                });
+              });
+          }
+        })();
+      </script>
+      <div>
+        <div class="hidden lg:flex items-center gap-4">
+          <ThemeToggle client:load />
+          <DonateButton />
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
