@@ -6,7 +6,7 @@ import image2 from "@assets/gale4.webp";
 <div class="py-16 max-w-[1400px] mx-auto">
   <div class="mx-auto px-4 text-gray-600 md:px-8">
     <div class="md:flex flex-row-reverse md:gap-6 md:space-y-0">
-      <div class="md:5/12 lg:w-1/2 pl-8">
+      <picture class="md:5/12 lg:w-1/2 :md:pl-8 lg:p-0">
         <Image
           src={image2}
           alt="image"
@@ -15,10 +15,10 @@ import image2 from "@assets/gale4.webp";
           quality={"mid"}
           class={" rounded-lg"}
         />
-      </div>
+      </picture>
       <div class="md:7/12 lg:w-1/2">
         <h2
-          class="text-3xl font-bold md:text-4xl text-slate-800 dark:text-slate-300"
+          class="text-3xl font-bold md:text-4xl text-slate-800 dark:text-slate-300 lg:text-left md:text-center pt-4"
         >
           Cras ac ligula sit amet lorem euismod tincidunt.
         </h2>

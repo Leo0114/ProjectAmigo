@@ -1,19 +1,13 @@
 ---
-function goBack() {
-  const params = new URLSearchParams(window.location.search);
-  const prevPage = params.get("prevPage");
-
-  if (prevPage) {
-    window.location.href = prevPage;
-  } else {
-    window.location.href = "/";
-  }
+interface Props {
+  path: string;
 }
+const { path } = Astro.props;
 ---
 
 <div class="flex xl:mx-8 pt-4">
   <a
-    href="/contact"
+    href={path}
     class="font-bold py-2 px-4 inline-flex items-center transition-all dark:hover:bg-slate-700
     rounded-full hover:bg-slate-300 hover:-translate-x-2 duration-300"
   >
