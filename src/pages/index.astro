@@ -1,19 +1,19 @@
 ---
-import Promo from "@components/aba/Promo.astro";
 import Layout from "../layouts/Layout.astro";
-import Banner from "@components/aba/Banner.astro";
-import SliderSection from "@components/layout/SliderSection.astro";
-import Intro2 from "@components/aba/intro2.astro";
-import Ast1 from "@components/aba/Ast1.astro";
-import Ways from "@components/aba/Ways.astro";
+import Hero from "@components/Home/Hero.astro";
+import Content from "@components/Home/Content.astro";
+import Content2 from "@components/Home/Content2.astro";
+import Logros from "@components/Home/Logros.astro";
+import Ways from "@components/Home/Ways.astro";
+import Banner from "@components/Home/Banner.astro";
 ---
 
 <Layout title="Home">
-  <Intro2 />
+  <Hero />
   <div class="px-4 mx-auto md:px-8">
-    <Promo />
-    <SliderSection />
-    <Ast1 />
+    <Content />
+    <Content2 />
+    <Logros />
   </div>
   <Ways />
   <Banner />

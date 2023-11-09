@@ -27,12 +27,10 @@ import { about } from "@data/about";
             about.map((a, index) => {
               const divClasses = `p-5 md:p-7 xl:p-10 border
                shadow-sm rounded-lg group:transition-all duration-300
-                hover:border-[#089dd0] dark:bg-gray-800 dark:border-gray-800 
-                dark:hover:border-blue-400 dark:shadow-none ${
-                  index === about.length - 1
-                    ? "sm:col-span-2 lg:col-span-1"
-                    : ""
-                }`;
+               group hover:bg-slate-100 hover:border-slate-300
+    hover:dark:bg-slate-700 hover:dark:border-slate-700 dark:border-none ${
+      index === about.length - 1 ? "sm:col-span-2 lg:col-span-1" : ""
+    }`;
 
               return (
                 <div class={divClasses}>

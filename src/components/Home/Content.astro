@@ -1,0 +1,37 @@
+---
+import para from "@assets/gale5.webp";
+import { Image } from "astro:assets";
+---
+
+<div class="py-16 max-w-[1400px] mx-auto">
+  <div class="mx-auto px-4 text-gray-600 md:px-8">
+    <div
+      class="md:flex flex-row-reverse md:gap-6 md:space-y-0 items-center text-left"
+    >
+      <div class="md:7/12 lg:w-1/2 pl-8">
+        <h2
+          class="text-3xl font-bold md:text-4xl text-slate-800 dark:text-slate-300"
+        >
+          Sed tristique nulla eu euismod suscipit.
+        </h2>
+        <p class="mt-8 mb-4 text-slate-800 dark:text-slate-300 prose-lg">
+          Somos una organización sin fines de lucro con una misión clara: apoyar
+          a estudiantes en Colima, México, para que construyan un futuro mejor a
+          través de la educación. A su ves creamos oportunidades para que
+          voluntarios de todo el mundo participen en un valioso servicio
+          humanitario, fomentando la amistad y el entendimiento entre culturas.
+        </p>
+      </div>
+      <picture class="md:5/12 lg:w-1/2">
+        <Image
+          src={para}
+          alt="image"
+          loading="lazy"
+          format="avif"
+          quality={"mid"}
+          class={" rounded-lg"}
+        />
+      </picture>
+    </div>
+  </div>
+</div>
